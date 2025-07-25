@@ -1,0 +1,32 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "Global Defaults",
+ "links": [],
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2025-07-25 14:38:17.603494",
+   "default_value": null,
+   "doc_type": "Global Defaults",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "sentence_case",
+   "idx": 0,
+   "is_system_generated": 0,
+   "modified": "2025-07-25 14:38:17.603494",
+   "modified_by": "Administrator",
+   "module": null,
+   "name": "Global Defaults-sentence_case-options",
+   "owner": "Administrator",
+   "property": "options",
+   "property_type": "Text",
+   "row_name": null,
+   "value": "\nSentence case\nlowercase\nUPPERCASE\nCapitalize Each Word\ntOGGLE cASE"
+  }
+ ],
+ "sync_on_migrate": 1
+}

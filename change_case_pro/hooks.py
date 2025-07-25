@@ -20,7 +20,16 @@ app_license = "mit"
 # 		"has_permission": "change_case_pro.api.permission.has_app_permission"
 # 	}
 # ]
+before_save = ["change_case_pro.events.apply_global_case"]
+before_insert = ["change_case_pro.events.apply_global_case"]
 
+# Alternative hook approach - use doc_events for more reliable triggering
+doc_events = {
+    "*": {
+        "before_save": "change_case_pro.events.apply_global_case",
+        "before_insert": "change_case_pro.events.apply_global_case"
+    }
+}
 # Includes in <head>
 # ------------------
 
