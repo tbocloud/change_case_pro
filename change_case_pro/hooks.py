@@ -21,10 +21,26 @@ app_license = "mit"
 # 	}
 # ]
 # Document Events - Apply case transformation before saving/inserting
+app_name = "change_case_pro"
+app_title = "Change Case Pro"
+app_publisher = "sammish"
+app_description = "Global text case transformation for Frappe Framework"
+app_email = "sammish.thundiyil@gmail.com"
+app_license = "MIT"
+
+# Method 1: Standard hooks
 before_save = ["change_case_pro.change_case.apply_global_case"]
 before_insert = ["change_case_pro.change_case.apply_global_case"]
 
-# Installation hooks - This will create custom fields automatically
+# Method 2: Document events (more reliable)
+doc_events = {
+    "*": {
+        "before_save": "change_case_pro.change_case.apply_global_case",
+        "before_insert": "change_case_pro.change_case.apply_global_case"
+    }
+}
+
+# Installation hooks
 after_install = "change_case_pro.change_case.after_install"
 before_uninstall = "change_case_pro.change_case.before_uninstall"
 
@@ -32,8 +48,6 @@ before_uninstall = "change_case_pro.change_case.before_uninstall"
 doctype_js = {
     "Global Defaults": "public/js/change_case.js"
 }
-# Includes in <head>
-# ------------------
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/change_case_pro/css/change_case_pro.css"
